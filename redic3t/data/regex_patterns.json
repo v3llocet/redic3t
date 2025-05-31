@@ -1,0 +1,14 @@
+{
+  "parameter_patterns": [
+    "(?i)\\b(?:next|url|target|rurl|dest|destination|redir|redirect_uri|redirect_url|redirect|view|go|image_url|checkout_url|continue|return_path|return|returnto|return_to|returnurl|success|data|qurl|login|logout|ext|clickurl|goto|rit_url|forward_url|forward|pic|callback_url|jump|jump_url|originurl|origin|desturl|u|u1|page|action|action_url|sp_url|service|recurl|link|burl|request|backurl|redirecturl|linkaddress|location|allinurl|q|src|click)\\s*=\\s*(?:https?://|//|/)?[^&\\s]+",
+    "(?i)(?:url|redirect|data|goto)\\s*=\\s*[A-Za-z0-9+/]{20,}={0,2}",
+    "(?i)(?:url|redirect)\\s*=\\s*(?:%25?2[fF]){4}[^&\\s]+"
+  ],
+  "endpoint_patterns": [
+    "(?i)/(?:redirect(?:\\.cgi)?|redir|out|goto|go|jump|link|url|view|continue|return|image(?:_|-)url|image|login|logout|forward|callback|service|origin|click|rurl)(?:/|\\.|$)",
+    "(?i)/cgi-bin/redirect\\.cgi(?:/|\\?|$)"
+  ],
+  "subdomain_patterns": [
+    "(?i)(?:^|\\.)?(?:redirect|redir|out|go|goto|jump|link|url|target|click|view|service|login|logout|forward|origin)(?=\\.)"
+  ]
+}

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "redic3t"
+version = "0.2.0"
+description = "Passive reconnaissance tool using Wayback Machine archives"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "v3llocet", email = "v3ll0cet@proton.me"}]
+dependencies = [
+  "requests>=2.31,<3.0"
+]
+
+[project.scripts]
+redic3t = "redic3t.cli:main"
+
+[tool.setuptools.package-data]
+redic3t = ["data/*.json"]
+
+[tool.black]
+target-version = ["py39"]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+select = ["E","F","I","B"]
